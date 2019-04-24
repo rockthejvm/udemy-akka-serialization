@@ -11,3 +11,8 @@ message OnlineStoreUser {
     optional string userEmail = 4;
     optional string userPhone = 5;
 }
+
+message ProtobufVote {
+    required string ssn = 1;
+    required string candidate = 2;
+}

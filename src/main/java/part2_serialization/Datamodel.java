@@ -1026,11 +1026,777 @@ public final class Datamodel {
 
   }
 
+  public interface ProtobufVoteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:part2_serialization.ProtobufVote)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string ssn = 1;</code>
+     */
+    boolean hasSsn();
+    /**
+     * <code>required string ssn = 1;</code>
+     */
+    java.lang.String getSsn();
+    /**
+     * <code>required string ssn = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getSsnBytes();
+
+    /**
+     * <code>required string candidate = 2;</code>
+     */
+    boolean hasCandidate();
+    /**
+     * <code>required string candidate = 2;</code>
+     */
+    java.lang.String getCandidate();
+    /**
+     * <code>required string candidate = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getCandidateBytes();
+  }
+  /**
+   * Protobuf type {@code part2_serialization.ProtobufVote}
+   */
+  public  static final class ProtobufVote extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:part2_serialization.ProtobufVote)
+      ProtobufVoteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProtobufVote.newBuilder() to construct.
+    private ProtobufVote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProtobufVote() {
+      ssn_ = "";
+      candidate_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProtobufVote(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              ssn_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              candidate_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return part2_serialization.Datamodel.internal_static_part2_serialization_ProtobufVote_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return part2_serialization.Datamodel.internal_static_part2_serialization_ProtobufVote_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              part2_serialization.Datamodel.ProtobufVote.class, part2_serialization.Datamodel.ProtobufVote.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SSN_FIELD_NUMBER = 1;
+    private volatile java.lang.Object ssn_;
+    /**
+     * <code>required string ssn = 1;</code>
+     */
+    public boolean hasSsn() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required string ssn = 1;</code>
+     */
+    public java.lang.String getSsn() {
+      java.lang.Object ref = ssn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          ssn_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string ssn = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSsnBytes() {
+      java.lang.Object ref = ssn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ssn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CANDIDATE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object candidate_;
+    /**
+     * <code>required string candidate = 2;</code>
+     */
+    public boolean hasCandidate() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required string candidate = 2;</code>
+     */
+    public java.lang.String getCandidate() {
+      java.lang.Object ref = candidate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          candidate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string candidate = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCandidateBytes() {
+      java.lang.Object ref = candidate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        candidate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasSsn()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCandidate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ssn_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, candidate_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ssn_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, candidate_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof part2_serialization.Datamodel.ProtobufVote)) {
+        return super.equals(obj);
+      }
+      part2_serialization.Datamodel.ProtobufVote other = (part2_serialization.Datamodel.ProtobufVote) obj;
+
+      if (hasSsn() != other.hasSsn()) return false;
+      if (hasSsn()) {
+        if (!getSsn()
+            .equals(other.getSsn())) return false;
+      }
+      if (hasCandidate() != other.hasCandidate()) return false;
+      if (hasCandidate()) {
+        if (!getCandidate()
+            .equals(other.getCandidate())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSsn()) {
+        hash = (37 * hash) + SSN_FIELD_NUMBER;
+        hash = (53 * hash) + getSsn().hashCode();
+      }
+      if (hasCandidate()) {
+        hash = (37 * hash) + CANDIDATE_FIELD_NUMBER;
+        hash = (53 * hash) + getCandidate().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static part2_serialization.Datamodel.ProtobufVote parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static part2_serialization.Datamodel.ProtobufVote parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static part2_serialization.Datamodel.ProtobufVote parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static part2_serialization.Datamodel.ProtobufVote parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static part2_serialization.Datamodel.ProtobufVote parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static part2_serialization.Datamodel.ProtobufVote parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static part2_serialization.Datamodel.ProtobufVote parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static part2_serialization.Datamodel.ProtobufVote parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static part2_serialization.Datamodel.ProtobufVote parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static part2_serialization.Datamodel.ProtobufVote parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static part2_serialization.Datamodel.ProtobufVote parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static part2_serialization.Datamodel.ProtobufVote parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(part2_serialization.Datamodel.ProtobufVote prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code part2_serialization.ProtobufVote}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:part2_serialization.ProtobufVote)
+        part2_serialization.Datamodel.ProtobufVoteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return part2_serialization.Datamodel.internal_static_part2_serialization_ProtobufVote_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return part2_serialization.Datamodel.internal_static_part2_serialization_ProtobufVote_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                part2_serialization.Datamodel.ProtobufVote.class, part2_serialization.Datamodel.ProtobufVote.Builder.class);
+      }
+
+      // Construct using part2_serialization.Datamodel.ProtobufVote.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        ssn_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        candidate_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return part2_serialization.Datamodel.internal_static_part2_serialization_ProtobufVote_descriptor;
+      }
+
+      @java.lang.Override
+      public part2_serialization.Datamodel.ProtobufVote getDefaultInstanceForType() {
+        return part2_serialization.Datamodel.ProtobufVote.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public part2_serialization.Datamodel.ProtobufVote build() {
+        part2_serialization.Datamodel.ProtobufVote result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public part2_serialization.Datamodel.ProtobufVote buildPartial() {
+        part2_serialization.Datamodel.ProtobufVote result = new part2_serialization.Datamodel.ProtobufVote(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.ssn_ = ssn_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.candidate_ = candidate_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof part2_serialization.Datamodel.ProtobufVote) {
+          return mergeFrom((part2_serialization.Datamodel.ProtobufVote)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(part2_serialization.Datamodel.ProtobufVote other) {
+        if (other == part2_serialization.Datamodel.ProtobufVote.getDefaultInstance()) return this;
+        if (other.hasSsn()) {
+          bitField0_ |= 0x00000001;
+          ssn_ = other.ssn_;
+          onChanged();
+        }
+        if (other.hasCandidate()) {
+          bitField0_ |= 0x00000002;
+          candidate_ = other.candidate_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasSsn()) {
+          return false;
+        }
+        if (!hasCandidate()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        part2_serialization.Datamodel.ProtobufVote parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (part2_serialization.Datamodel.ProtobufVote) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object ssn_ = "";
+      /**
+       * <code>required string ssn = 1;</code>
+       */
+      public boolean hasSsn() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required string ssn = 1;</code>
+       */
+      public java.lang.String getSsn() {
+        java.lang.Object ref = ssn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            ssn_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string ssn = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSsnBytes() {
+        java.lang.Object ref = ssn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ssn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string ssn = 1;</code>
+       */
+      public Builder setSsn(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        ssn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ssn = 1;</code>
+       */
+      public Builder clearSsn() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ssn_ = getDefaultInstance().getSsn();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string ssn = 1;</code>
+       */
+      public Builder setSsnBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        ssn_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object candidate_ = "";
+      /**
+       * <code>required string candidate = 2;</code>
+       */
+      public boolean hasCandidate() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required string candidate = 2;</code>
+       */
+      public java.lang.String getCandidate() {
+        java.lang.Object ref = candidate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            candidate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string candidate = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCandidateBytes() {
+        java.lang.Object ref = candidate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          candidate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string candidate = 2;</code>
+       */
+      public Builder setCandidate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        candidate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string candidate = 2;</code>
+       */
+      public Builder clearCandidate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        candidate_ = getDefaultInstance().getCandidate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string candidate = 2;</code>
+       */
+      public Builder setCandidateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        candidate_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:part2_serialization.ProtobufVote)
+    }
+
+    // @@protoc_insertion_point(class_scope:part2_serialization.ProtobufVote)
+    private static final part2_serialization.Datamodel.ProtobufVote DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new part2_serialization.Datamodel.ProtobufVote();
+    }
+
+    public static part2_serialization.Datamodel.ProtobufVote getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ProtobufVote>
+        PARSER = new com.google.protobuf.AbstractParser<ProtobufVote>() {
+      @java.lang.Override
+      public ProtobufVote parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ProtobufVote(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProtobufVote> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProtobufVote> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public part2_serialization.Datamodel.ProtobufVote getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_part2_serialization_OnlineStoreUser_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_part2_serialization_OnlineStoreUser_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_part2_serialization_ProtobufVote_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_part2_serialization_ProtobufVote_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1043,7 +1809,9 @@ public final class Datamodel {
       "\n\032main/proto/datamodel.proto\022\023part2_seri" +
       "alization\"U\n\017OnlineStoreUser\022\n\n\002id\030\001 \002(\005" +
       "\022\020\n\010userName\030\002 \002(\t\022\021\n\tuserEmail\030\004 \001(\t\022\021\n" +
-      "\tuserPhone\030\005 \001(\tB\025\n\023part2_serialization"
+      "\tuserPhone\030\005 \001(\t\".\n\014ProtobufVote\022\013\n\003ssn\030" +
+      "\001 \002(\t\022\021\n\tcandidate\030\002 \002(\tB\025\n\023part2_serial" +
+      "ization"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1063,6 +1831,12 @@ public final class Datamodel {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_part2_serialization_OnlineStoreUser_descriptor,
         new java.lang.String[] { "Id", "UserName", "UserEmail", "UserPhone", });
+    internal_static_part2_serialization_ProtobufVote_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_part2_serialization_ProtobufVote_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_part2_serialization_ProtobufVote_descriptor,
+        new java.lang.String[] { "Ssn", "Candidate", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
