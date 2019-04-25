@@ -142,4 +142,4 @@ object SerializersBenchmark_Persistence extends App {
   *  134.2436000000000000 | benchmark-avro
   *  156.2254000000000000 | benchmark-protobuf
   *  108.2505000000000000 | benchmark-kryo
-  * /
+  */
